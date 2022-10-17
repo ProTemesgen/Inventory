@@ -17,10 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id')->references('id')->on('categories')->onDelete('restrict')->onUpdate('cascade');
             $table->foreignId('branch_id')->references('id')->on('branches')->onDelete('restrict')->onUpdate('cascade');
-            $table->string('assetType');
-            $table->string('metric');
             $table->bigInteger('assetCost');
-            $table->bigInteger('assetPrice');
+            $table->text('assetDescription')->nullable();
             $table->timestamps();
         });
     }

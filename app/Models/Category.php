@@ -9,6 +9,16 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $table = 'categories';
+
+    protected $fillable = [
+        'assetQrCode',
+        'assetIdentificationName',
+        'categoryMetric',
+        'categoryType',
+        'categoryPrice',
+        'assetCounter'
+    ];
 
 
     public function asset(){

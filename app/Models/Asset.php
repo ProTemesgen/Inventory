@@ -9,6 +9,15 @@ class Asset extends Model
 {
     use HasFactory;
 
+    protected $table = 'assets';
+
+    protected $fillable = [
+        'category_id',
+        'branch_id',
+        'assetCost',
+        'assetDescription'
+    ];
+
 
     public function category(){
         return $this->belongsTo(Category::class);

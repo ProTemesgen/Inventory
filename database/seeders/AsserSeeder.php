@@ -24,11 +24,8 @@ class AsserSeeder extends Seeder
             DB::table('assets')->insert([
                     'category_id'               =>          $faker->numberBetween(1,25),
                     'branch_id'                 =>          $faker->numberBetween(1,25),
-                    'assetType'                 =>          $faker->name(),
-                    'metric'                    =>          $faker->name(),
                     'assetCost'                 =>          $faker->numberBetween(5000,50000),
-                    'assetPrice'                =>          $faker->numberBetween(7000,70000),
-
+                    'assetDescription'          =>          $faker->text()
             ]);
         }
     }

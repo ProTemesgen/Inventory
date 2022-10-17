@@ -24,6 +24,9 @@ class CategorySeeder extends Seeder
             DB::table('categories')->insert([
                     'assetQrCode'                           =>          $faker->name(),
                     'assetIdentificationName'               =>          $faker->name(),
+                    'categoryType'                          =>          $faker->name(),
+                    'categoryMetric'                        =>          $faker->name(),
+                    'categoryPrice'                         =>          $faker->numberBetween(2000,70000),
                     'assetCounter'                          =>          $faker->numberBetween(1,10000000),
             
 

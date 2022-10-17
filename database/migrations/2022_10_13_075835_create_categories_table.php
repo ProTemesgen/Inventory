@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('assetQrCode');
             $table->string('assetIdentificationName');
+            $table->string('categoryMetric');
+            $table->string('categoryType');
+            $table->bigInteger('categoryPrice');
             $table->bigInteger('assetCounter');
             $table->timestamps();
         });

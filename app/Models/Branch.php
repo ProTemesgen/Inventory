@@ -9,6 +9,12 @@ class Branch extends Model
 {
     use HasFactory;
 
+    protected $table = 'branches';
+
+    protected $fillable = [
+        'branchName', 'branchAddress', 'RentalCost'
+    ];
+
 
     public function asset(){
         return $this->hasMany(Asset::class);

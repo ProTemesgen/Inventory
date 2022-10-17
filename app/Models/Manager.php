@@ -9,6 +9,18 @@ class Manager extends Model
 {
     use HasFactory;
 
+    protected $table = 'managers';
+
+    protected $fillable = [
+        'branch_id',
+        'managerFname',
+        'managerLname',
+        'managerAddress',
+        'managerPhone',
+        'managerSallary',
+        'managerScanedId'
+    ];
+
 
 
     public function branch(){
